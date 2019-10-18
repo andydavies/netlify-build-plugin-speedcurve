@@ -1,3 +1,5 @@
+[![Known Vulnerabilities](https://snyk.io/test/github/tkadlec/netlify-build-plugin-speedcurve/badge.svg)](https://snyk.io/test/github/tkadlec/netlify-build-plugin-speedcurve)
+
 # Netlify SpeedCurve Deploy Plugin
 
 After a successful build, tell SpeedCurve you've deployed and trigger a round of testing.

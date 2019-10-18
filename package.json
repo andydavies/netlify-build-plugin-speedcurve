@@ -1,6 +1,6 @@
 {
   "name": "netlify-build-plugin-speedcurve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "snyk": "^1.236.0"
   }
 }
