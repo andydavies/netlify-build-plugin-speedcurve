@@ -2,7 +2,9 @@ const {
     env: {
         //Your SpeedCurve API Key (Admin > Teams)
         SPEEDCURVE_API_KEY,
-        SPEEDCURVE_SITE_ID
+        SPEEDCURVE_SITE_ID,
+        //provided by Netlify
+        COMMIT_REF
     }
 } = require('process')
 
@@ -21,7 +23,8 @@ module.exports = {
                 "Accept-Charset": "utf-8"
             },
             body: JSON.stringify({
-                site_id: SPEEDCURVE_SITE_ID
+                site_id: SPEEDCURVE_SITE_ID,
+                note: COMMIT_REF
             })
         })
         .then(function (data) {
