@@ -11,7 +11,7 @@ const {
 const fetch = require('node-fetch');
 
 module.exports = {
-    async finally() {
+    async onEnd() {
         console.log('Preparing to trigger SpeedCurve tests');
 
         fetch('https://api.speedcurve.com/v1/deploys', {
