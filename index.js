@@ -11,6 +11,7 @@ const {
 const fetch = require('node-fetch');
 
 module.exports = {
+    name: 'netlify-build-plugin-speedcurve',
     async onSuccess() {
         console.log('Preparing to trigger SpeedCurve tests');
 

@@ -18,8 +18,7 @@ build:
   ...
 
 plugins:
-  netlify-build-plugin-speedcurve:
-    type: netlify-build-plugin-speedcurve
+  - type: netlify-build-plugin-speedcurve
 ```
 
 3. Grab your [SpeedCurve API Key (Admin > Teams)](https://speedcurve.com/admin/teams) and the ID for the site you want to test (under Settings > Sites) and store them as environmental variables inside of Netlify. *At the moment, Netlify Build plugins are in private beta so you'll need to [work with the Netlify folks to get build plugins enabled](https://forms.gle/RemZEGP35P8fEL848).*
@@ -30,4 +29,4 @@ plugins:
 netlify build --dry
 ```
 
-If you see `Plugin netlify-build-plugin-speedcurve netlify-build-plugin-speedcurve` attached to the `finally` lifecycle, you should be all set! Deploy knowing that you're tracking each change in SpeedCurve for analysis.
+If you see `Plugin netlify-build-plugin-speedcurve netlify-build-plugin-speedcurve` attached to the `onSuccess` lifecycle, you should be all set! Deploy knowing that you're tracking each change in SpeedCurve for analysis.
