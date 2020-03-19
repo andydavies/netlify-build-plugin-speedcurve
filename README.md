@@ -5,25 +5,18 @@
 After a successful build, tell SpeedCurve you've deployed and trigger a round of testing.
 
 ## Usage
-1. Install the plugin using `npm`:
+1. Add the following lines to your `netlify.toml` configuration file:
 
-```
-npm i netlify-build-plugin-speedcurve
-```
-
-2. Update your `netlify.yml` configuration file to reference the plugin in your plugins section:
-
-```yml
-build:
-  ...
-
-plugins:
-  - type: netlify-build-plugin-speedcurve
+```toml
+[[plugins]]
+package = "netlify-build-plugin-speedcurve"
 ```
 
-3. Grab your [SpeedCurve API Key (Admin > Teams)](https://speedcurve.com/admin/teams) and the ID for the site you want to test (under Settings > Sites) and store them as environmental variables inside of Netlify. *At the moment, Netlify Build plugins are in private beta so you'll need to [work with the Netlify folks to get build plugins enabled](https://forms.gle/RemZEGP35P8fEL848).*
+Note: The `[[plugins]]` line is required for each plugin, even if you have other plugins in your `netlify.toml` file already.
 
-4. Using the latest version of the Netlify CLI, run a dry build:
+2. Grab your [SpeedCurve API Key (Admin > Teams)](https://speedcurve.com/admin/teams) and the ID for the site you want to test (under Settings > Sites) and store them as environmental variables inside of Netlify. *At the moment, Netlify Build plugins are in private beta so you'll need to [work with the Netlify folks to get build plugins enabled](https://forms.gle/RemZEGP35P8fEL848).*
+
+3. Using the latest version of the Netlify CLI, run a dry build:
 
 ```
 netlify build --dry
