@@ -6,6 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "netlify",
+    "netlify-plugin"
+  ],
+  "repository": "tkadlec/netlify-build-plugin-speedcurve",
+  "bugs": {
+    "url": "https://github.com/tkadlec/netlify-build-plugin-speedcurve/issues"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
