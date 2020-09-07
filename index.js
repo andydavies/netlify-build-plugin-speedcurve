@@ -11,7 +11,7 @@ const {
 const fetch = require('node-fetch');
 
 module.exports = {
-    async onSuccess({ utils: { build: { failPlugin, failBuild } } }) {
+    async onSuccess({ utils: { build: { failPlugin } } }) {
         console.log('Preparing to trigger SpeedCurve tests');
 
         try {
@@ -35,7 +35,7 @@ module.exports = {
 
             console.log('SpeedCurve test submitted!');
         } catch (error) {
-            return failBuild('SpeedCurve test failed', { error })
+            return failPlugin('SpeedCurve test failed', { error })
         }
     }
 }
